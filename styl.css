@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New';
+}
+
+/* uzywane kolory  */
+:root {
+    --niebieski: #2563eb;     /* kolor nagłówka */
+    --zielony: #2ecc71;       /* status: dostarczone */
+    --pomaranczowy: #f39c12;  /* status: w realizacji */
+    --jasnyniebieski: #3498db; /* status: nowe */
+    --fioletowy: #9b59b6;     /* status: wysłane */
+    --tlo: #f4f4f4;           /* tło strony */
+    --bialy: #ffffff;         /* tło tabeli */
+    --szary-jasny: #f9f9f973;   /* tło parzystych wierszy */
+    --szary-hover: #36343442;   /* kolor przy najechaniu */
+    --szary-linie: #dddddd3a;      /* kolor linii w tabeli */
+    --czarny: #333;           /* kolor tekstu */
+}
+
+/* Podstawowy styl strony */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: var(--tlo);
+}
+
+/* Nagłówek strony */
+header {
+    background-color: var(--niebieski);
+    color: var(--bialy);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Przycisk w nagłówku */
+button {
+    background-color: var(--bialy);
+    color: var(--niebieski);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  
+}
+
+/* Efekt najechania na przycisk */
+button:hover {
+    transform: scale(1.1); /* powiększenie */
+}
+
+
+/* Style tabeli */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: var(--bialy);
+}
+
+/* Nagłówki tabeli */
+th {
+    background-color: var(--niebieski);
+    color: var(--bialy);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: left;
+}
+
+/* Komórki tabeli */
+td {
+    border: 1px solid var(--szary-linie);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* Parzyste wiersze tabeli */
+tr:nth-child(even) {
+    background-color: var(--szary-jasny);
+}
+
+
+tr:hover {
+    background-color: var(--szary-hover);
+}
+
+/* Pole wyszukiwania */
+#searchInput {
+    width: 1810px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 8px;
+    border: 1px solid var(--szary-linie);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Kolory statusów */
+.status-dostarczone {
+    color: var(--zielony);
+    font-weight: bold;
+    border: 1px solid var(--zielony);
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+       margin-top:7px;
+    display: inline-block;
+   
+}
+
+.status-w-realizacji {
+    color: var(--pomaranczowy);
+    font-weight: bold;
+    border: 1px solid var(--pomaranczowy);
+    border-radius: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 7px;
+    display: inline-block;
+}
+
+.status-nowe {
+    color: var(--jasnyniebieski);
+    font-weight: bold;
+    border: 1px solid var(--jasnyniebieski);
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+       margin-top: 7px;
+    display: inline-block;
+
+}
+
+.status-wyslane {
+    color: var(--fioletowy);
+    font-weight: bold;
+    border: 1px solid var(--fioletowy);
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+       margin-top: 7px;
+    display: inline-block;
+}
+
+/* Formatowanie kwoty */
+.kwota {
+    color: var(--niebieski);
+    font-weight: bold;
+}
+
+/* Responsywność dla telefonów */
+@media (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+    
+    table {
+        font-size: 8px;
+    }
+    
+    th, td {
+        padding: 4px;
+    }
+}
